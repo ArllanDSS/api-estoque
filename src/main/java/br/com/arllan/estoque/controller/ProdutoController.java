@@ -2,6 +2,7 @@ package br.com.arllan.estoque.controller;
 
 import br.com.arllan.estoque.model.Produto;
 import br.com.arllan.estoque.service.ProdutoService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public class ProdutoController {
     }
 
     @PostMapping
-    public Produto criar(@RequestBody Produto produto) {
+    public Produto criar(@Valid @RequestBody Produto produto) {
         return produtoService.criar(
                 produto.getNome(),
                 produto.getDescricao(),

@@ -1,12 +1,26 @@
 package br.com.arllan.estoque.model;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
+
 public class Produto {
 
     private Long id;
+    @NotBlank(message = "O nome é obrigatório")
     private String nome;
+
+    @NotBlank(message = "A descrição é obrigatória")
     private String descricao;
+
+    @NotNull(message = "O preço é obrigatório")
+    @PositiveOrZero(message = "O preço não pode ser negativo")
     private Double preco;
+
+    @NotNull(message = "A quantidade é obrigatória")
+    @PositiveOrZero(message = "A quantidade não pode ser negativa")
     private Integer quantidadeEstoque;
+
     private Boolean ativo;
 
     public Produto(){}
