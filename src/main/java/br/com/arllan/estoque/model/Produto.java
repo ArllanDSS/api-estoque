@@ -6,16 +6,16 @@ public class Produto {
     private String nome;
     private String descricao;
     private Double preco;
-    private Integer quantidade;
+    private Integer quantidadeEstoque;
     private Boolean ativo;
 
     public Produto(){}
 
-    public Produto(String nome, String descricao, Double preco, Integer quantidade,  Boolean ativo) {
+    public Produto(String nome, String descricao, Double preco, Integer quantidadeEstoque,  Boolean ativo) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
-        this.quantidade = quantidade;
+        this.quantidadeEstoque = quantidadeEstoque;
         this.ativo = ativo;
     }
 
@@ -35,8 +35,8 @@ public class Produto {
         return preco;
     }
 
-    public Integer getQuantidade() {
-        return quantidade;
+    public Integer getQuantidadeEstoque() {
+        return quantidadeEstoque;
     }
 
     public Boolean getAtivo() {
@@ -59,8 +59,8 @@ public class Produto {
         this.preco = preco;
     }
 
-    public void setQuantidade(Integer quantidade) {
-        this.quantidade = quantidade;
+    public void setQuantidadeEstoque(Integer quantidadeEstoque) {
+        this.quantidadeEstoque = quantidadeEstoque;
     }
 
     public void setAtivo(Boolean ativo) {
